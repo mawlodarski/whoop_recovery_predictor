@@ -43,7 +43,7 @@ metrics of full model:
 mse: 113.65271576275359  
 rmse: 10.66080277290381  
 
-because HRV showed correlation in pairplot, I built a HRV single feature linear regression and avg guessing models to compare full model with:  
+because HRV showed correlation in pairplot + had highest coefficient, I built a HRV single feature linear regression and avg guessing models to compare full model with:  
 full model r2: 0.5942571221294302
 hrv only r2: 0.4191500457598223
 avg r2: -0.010311472695462287
