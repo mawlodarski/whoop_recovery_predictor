@@ -5,6 +5,7 @@ pre-scaled, filtered raw data included 177 days of data for 23 features
 final feature table contains 165 days: scaled, cleaned (outliers), filtered
 
 model target performance: ### target performance / metric: make recovery score predictions within 10% (lower or higher) than ground truth recovery score
+mean squared error for regression (MSE)
 
 ML system process:
 1. Generate idea + big picture problem
