@@ -4,8 +4,10 @@ At end of day, input day’s strain + previous day recovery, sleep and strain sc
 pre-scaled, filtered raw data included 177 days of data for 23 features
 final feature table contains 165 days: scaled, cleaned (outliers), filtered
 
-model target performance: ### target performance / metric: make recovery score predictions within 10% (lower or higher) than ground truth recovery score
-mean squared error for regression (MSE)
+model target performance:
+primary target performance metric: make recovery score predictions within 17 points (lower or higher) than ground truth recovery score at for ~90% of predictions  
+to allow for same Whoop recovery tier/band third,    
+mean squared error for regression (MSE), r2,  
 
 ML system process:
 1. Generate idea + big picture problem
@@ -35,7 +37,20 @@ were standardized to 0 mean and sd 1.
 
 final data: 164 days, 8 features, 1 target variable.
 
-5. Select model and train it (1)
-Linear regression chosen
+5. Select model and train + evaluate it (1)
+Linear regression chosen  
+metrics of full model:  
+mse: 113.65271576275359  
+rmse: 10.66080277290381  
+
+because HRV showed correlation in pairplot, I built a HRV single feature linear regression and avg guessing models to compare full model with:  
+full model r2: 0.5942571221294302
+hrv only r2: 0.4191500457598223
+avg r2: -0.010311472695462287
+
+Evaluation metric
+
+6. Iterate/fine-tune model/solution (1)
+try different test size split
 
 7. Present/deploy and document model (0.5)
