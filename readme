@@ -35,5 +35,7 @@ were standardized to 0 mean and sd 1.
 
 final data: 165 days, 8 features, 1 target variable.
 
+5. Select model and train it (0.5)
+Linear regression chosen
 
 7. Present/deploy and document model (0.5)
