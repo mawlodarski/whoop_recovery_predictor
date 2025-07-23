@@ -1,1 +1,38 @@
+Whoop regression project:
+At end of day, input day’s strain + previous day recovery, sleep and strain score to predict next morning recovery score
 
+pre-scaled, filtered raw data included 177 days of data for 23 features
+final feature table contains 165 days: scaled, cleaned (outliers), filtered
+
+model target performance: ### target performance / metric: make recovery score predictions within 10% (lower or higher) than ground truth recovery score
+
+ML system process:
+1. Generate idea + big picture problem
+2. Collect data
+3. Explore data: types of features, data types, ranges, visualize distributions, correlations, outlier detection
+4. Prepare data for ML algorithms: select features, convert nominal/categorical data to numerical, normalize/standardize values, drop missing values, drop outliers
+5. Select a model and train it
+6. Iterate/fine-tune model/solution
+7. Present/deploy and document model
+
+intial model: Whoop regression project: (hours spent per task)
+1. Generate idea + big picture problem | (0.5)
+Before bed, can I predict next morning's recovery score based on today's strain (workload) and yesterday's recovery score?
+
+2. Collect data (0.5)
+Export physiological cycles data from Whoop: 177 days, 23 bio-metrics
+
+3. Explore data (1.5)
+Mixed features: date-time objects, Heart rate (big value range), respiratory rate (low value range), mostly normal distributions (gaussian) via histograms/kde plots, 
+correlation anaylis: HRV highly correlated with overall recovery (pair plots). Couple outliers: days where I had slept only ~1-2 hours (via box plots).
+
+4. Prepare data for ML algorithms: (1.5)
+Chose 'top' 8 influential features (personal and research based bio-metrics, had a fairly good concept of what's important thanks to my athletic background), and 1
+target variable: Recovery Score %. Shifted dates to reflect data of previous day (except strain), so that the physiological cycle could be inputted at night and predict next
+day's recovery. Dropped rows with missing values. Dropped rows with < 100 minutes sleep. Because feature data was fairly gaussian/normal, features (but not target variable, recovery score)
+were standardized to 0 mean and sd 1. 
+
+final data: 165 days, 8 features, 1 target variable.
+
+
+7. Present/deploy and document model (0.5)
