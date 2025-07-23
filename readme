@@ -33,7 +33,7 @@ target variable: Recovery Score %. Shifted dates to reflect data of previous day
 day's recovery. Dropped rows with missing values. Dropped rows with < 100 minutes sleep. Because feature data was fairly gaussian/normal, features (but not target variable, recovery score)
 were standardized to 0 mean and sd 1. 
 
-final data: 165 days, 8 features, 1 target variable.
+final data: 164 days, 8 features, 1 target variable.
 
 5. Select model and train it (0.5)
 Linear regression chosen
