@@ -52,6 +52,6 @@ Evaluation metric
 
 6. Iterate/fine-tune model/solution (3)
 try different test size split
-#need to cap at 100
+#need to cap at 100 instead of standardization i tried feature normalization (0-1 range)
 
 7. Present/deploy and document model (0.5)
