@@ -53,5 +53,7 @@ Evaluation metric
 6. Iterate/fine-tune model/solution (3)
 try different test size split
 #need to cap at 100 instead of standardization i tried feature normalization (0-1 range) trying sigmoid output
+try a few nights of data, is score always >100/1.0??s
+
 
 7. Present/deploy and document model (0.5)
